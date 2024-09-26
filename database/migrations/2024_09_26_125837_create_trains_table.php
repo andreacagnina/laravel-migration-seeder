@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('arrival_station', 100);
             $table->time('departure_time');
             $table->time('arrival_time');
-            $table->string('train_code');
+            $table->unsignedMediumInteger('train_code');
             $table->unsignedMediumInteger('number_of_carriages');
             $table->boolean('delay')->default(false);
             $table->boolean('suppressed')->default(false);
