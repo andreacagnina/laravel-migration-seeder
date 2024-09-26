@@ -10,15 +10,15 @@
                         @foreach ($trains as $train)
                             <ul>
                                 <li>
-                                    {{ $train->company }},
-                                    {{ $train->departure_station }},
-                                    {{ $train->arrival_station }},
-                                    {{ $train->departure_time }},
-                                    {{ $train->arrival_time }},
-                                    {{ $train->train_code }},
-                                    {{ $train->number_of_carriages }},
-                                    {{ $train->delay }},
-                                    {{ $train->suppressed }},
+                                    <strong>Company:</strong> {{ $train->company }}<br>
+                                    <strong>Stazione di Partenza:</strong> {{ $train->departure_station }}<br>
+                                    <strong>Stazione di arrivo:</strong> {{ $train->arrival_station }}<br>
+                                    <strong>Orario di partenza:</strong> {{ $train->departure_time }}<br>
+                                    <strong>Orario di arrivo:</strong> {{ $train->arrival_time }}<br>
+                                    <strong>Codice vettura:</strong> {{ $train->train_code }}<br>
+                                    <strong>Numero carrozze:</strong> {{ $train->number_of_carriages }}<br>
+                                    <strong>Ritardo:</strong> {{ $train->delay }}<br>
+                                    <strong>Cancellato:</strong> {{ $train->suppressed }}<br>
                                 </li>
                             </ul>
                         @endforeach

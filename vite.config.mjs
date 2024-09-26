@@ -12,6 +12,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        hmr: {
+            overlay: false, // Disabilita l'overlay degli errori
+        },
+    },
     // Add resolve object and aliases
     resolve: {
         alias: {
