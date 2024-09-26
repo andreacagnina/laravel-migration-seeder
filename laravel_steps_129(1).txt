@@ -31,7 +31,8 @@ E' POSSIBILE MODIFICARE I DATI NELLE COLONNE GUARDARE DAL MIN 12:30 DELLA LEZION
 
 1.3 lancio il comando php artisan migrate
 
-1- Creo il model a partire dal nome della tabella. Il nome del model deve essere in pascalcase e singola. il comando è: php artisan make:model NomeModello (es. php artisan make:model House)
+1- Creo il model a partire dal nome della tabella. Il nome del model deve essere in pascalcase e singolare. il comando è: php artisan make:model NomeModello (es. php artisan make:model House)
+
 1.2 in model use Faker\Generator as Faker;
 CICLO FAKER GUARDA LEZIONE DAL MINUTO 12:44
 
