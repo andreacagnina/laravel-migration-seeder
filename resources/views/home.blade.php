@@ -17,8 +17,12 @@
                                     <strong>Orario di arrivo:</strong> {{ $train->arrival_time }}<br>
                                     <strong>Codice vettura:</strong> {{ $train->train_code }}<br>
                                     <strong>Numero carrozze:</strong> {{ $train->number_of_carriages }}<br>
-                                    <strong>Ritardo:</strong> {{ $train->delay }}<br>
-                                    <strong>Cancellato:</strong> {{ $train->suppressed }}<br>
+                                    <strong>Ritardo:</strong>
+                                    {{ $train->delay ? 'Il treno è in ritardo' : 'Il treno è in orario' }}<br>
+
+                                    <strong>Cancellato:</strong>
+                                    {{ $train->suppressed ? 'Il treno è stato soppresso' : 'No' }}<br>
+
                                 </li>
                             </ul>
                         @endforeach

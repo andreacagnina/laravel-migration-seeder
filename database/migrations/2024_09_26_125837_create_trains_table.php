@@ -22,8 +22,8 @@ return new class extends Migration
             $table->time('arrival_time');
             $table->unsignedMediumInteger('train_code');
             $table->unsignedMediumInteger('number_of_carriages');
-            $table->boolean('delay')->default(false);
-            $table->boolean('suppressed')->default(false);
+            $table->boolean('delay');
+            $table->boolean('suppressed');
             $table->timestamps();
         });
     }
