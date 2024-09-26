@@ -24,7 +24,7 @@ class TrainsTableSeeder extends Seeder
             $train->departure_time = $faker->time();
             $train->arrival_time = $faker->time();
             $train->train_code = $faker->randomNumber(5, false);
-            $train->number_of_carriages = $faker->numberBetween(0, 100);
+            $train->number_of_carriages = $faker->numberBetween(1, 100);
             $train->delay = $faker->boolean();
             $train->suppressed = $faker->boolean();
 
