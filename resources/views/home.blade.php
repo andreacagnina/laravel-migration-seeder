@@ -9,22 +9,18 @@
                     <div class="col-12">
                         @foreach ($trains as $train)
                             <ul>
-                                @if ($train->departure_station != $train->arrival_station && $train->arrival_time > $train->departure_time)
+                                @if ($train->departure_station != $train->arrival_station)
                                     <li>
                                         <strong>Company:</strong> {{ $train->company }}<br>
                                         <strong>Stazione di Partenza:</strong> {{ $train->departure_station }}<br>
                                         <strong>Stazione di arrivo:</strong> {{ $train->arrival_station }}<br>
-                                        <strong>Orario di partenza:</strong> {{ $train->departure_time }}<br>
-                                        <strong>Orario di arrivo:</strong> {{ $train->arrival_time }}<br>
+                                        <strong>Orario di partenza:</strong>
+                                        {{ !$train->suppressed ? $train->departure_time : 'IL TRENO è STATO SOPPRESSO' }}<br>
+                                        <strong>Orario di arrivo:</strong>
+                                        {{ !$train->suppressed ? $train->arrival_time : 'IL TRENO è STATO SOPPRESSO' }}<br>
                                         <strong>Codice vettura:</strong> {{ $train->train_code }}<br>
                                         <strong>Numero carrozze:</strong> {{ $train->number_of_carriages }}<br>
-                                        @if ($train->delay)
-                                            <strong>IL TRENO è IN RITARDO, CI SCUSIAMO PER IL DISAGIO</strong><br>
-                                        @endif
-
-                                        @if ($train->suppressed)
-                                            <strong>IL TRENO è STATO SOPPRESSO</strong>
-                                        @endif
+                                        <strong>{{ !$train->suppressed ? ($train->delay ? 'IL TRENO è IN RITARDO, CI SCUSIAMO PER IL DISAGIO' : '') : 'IL TRENO è STATO SOPPRESSO' }}</strong>
                                     </li>
                                 @endif
                             </ul>
